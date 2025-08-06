@@ -1,3 +1,5 @@
+pysqlite3-binary # <-- ADD THIS LINE AT THE TOP
+
 # Main framework for the web application
 streamlit
 
@@ -7,8 +9,8 @@ python-dotenv
 # Core libraries for the generative AI model and LangChain framework
 google-generativeai>=0.3.0
 langchain>=0.1.0
-langchain-community  # <-- ADD THIS LINE
-pypdf                # <-- AND ADD THIS LINE
+langchain-community
+pypdf
 langchain-google-genai
 
 # Vector store for RAG (retrieval-augmented generation)
