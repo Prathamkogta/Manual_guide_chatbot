@@ -1,0 +1,23 @@
+# Main framework for the web application
+streamlit
+
+# For loading environment variables from a .env file
+python-dotenv
+
+# Core libraries for the generative AI model and LangChain framework
+google-generativeai>=0.3.0
+langchain>=0.1.0
+langchain-google-genai
+
+# Vector store for RAG (retrieval-augmented generation)
+langchain-chroma
+chromadb>=0.4.15
+
+# For the new web search feature
+tavily-python
+
+# Document processing (PDFs, Excel)
+PyMuPDF>=1.23.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+Pillow>=10.0.0
