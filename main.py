@@ -1,4 +1,14 @@
+import sys
+import subprocess
 import os
+
+# Fix for SQLite3 version issue on Streamlit Cloud
+try:
+    import pysqlite3
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+    
 import base64
 import streamlit as st
 from dotenv import load_dotenv
