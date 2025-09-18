@@ -62,11 +62,7 @@ def main():
                 return
             
             chunks = processor.chunk_documents(st.session_state.all_documents)
-            filtered_chunks = [chunk for chunk in chunks if chunk.page_content.strip()]
-            if not filtered_chunks:
-                st.warning("After processing, no valid text content was found in the documents.")
-                return
-            retriever.create_vector_store(filtered_chunks, st.session_state.all_images_data)
+            retriever.create_vector_store(chunks, st.session_state.all_images_data)
             st.session_state.data_loaded = True
 
     if "messages" not in st.session_state:
